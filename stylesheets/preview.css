@@ -1,0 +1,32 @@
+
+#main-view {
+	width: 100%;
+}
+#card-box {
+	width: 100%;
+	height: calc(100vh - 128px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#main-view input {
+	position: fixed;
+	top: calc(100vh - 64px - 16px);
+	margin: 8px;
+	padding: 0px;
+	width: 64px;
+	height: 64px;
+	background: rgb(10, 10, 10);
+	color: rgb(100, 100, 100);
+	font-family: inherit;
+	font-size: 2em;
+	border-radius: 100%;
+}
+#right {
+	right: 0px;
+}
+#main-view input[type=button]:enabled:hover {
+	color: white;
+	border: 1px solid white;
+	cursor: pointer;
+}

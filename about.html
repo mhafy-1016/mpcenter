@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>M-Project Center</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preload" href="res/font/Mojang-Regular.ttf" as="font" crossOrigin="anonymous" />
+		<link rel="preload" href="res/font/Mojang-Bold.ttf" as="font" crossOrigin="anonymous" />
+		<link rel="icon" href="res/logo/logo.png">
+		<link rel="stylesheet" href="stylesheets/style.css">
+		<link rel="stylesheet" href="stylesheets/about.css">
+		<script type="module" src="scripts/module.js"></script>
+	</head>
+	
+	<body>
+		<!--div id="cover"></div-->
+		<div id="captcha-view">
+			<div id="captcha-container" class="icon">
+				<div id="captcha-grid">
+					<div class="captcha-grid-cell"></div>
+					<div class="captcha-grid-cell"></div>
+					<div class="captcha-grid-cell"></div>
+					<div class="captcha-grid-cell"></div>
+					<div class="captcha-grid-cell"></div>
+					<div class="captcha-grid-cell"></div>
+					<div class="captcha-grid-cell"></div>
+					<div class="captcha-grid-cell"></div>
+					<div class="captcha-grid-cell"></div>
+				</div>
+				<div id="captcha-result">result</div>
+				<div id="captcha-title">Complete the<br>Recipe</div>
+				<div id="captcha-caption">Drag & Drop</div>
+				<div id="captcha-close">x</div>
+			</div>
+		</div>
+		<div id="login-view">
+			<div id="login-container">
+				<span class="login-title">Login / Register</span>
+				<input type="email" class="login-container-item login-email" placeholder="Email" />
+				<span class="input-alert"></span>
+				<input type="password" class="login-container-item login-pass" placeholder="Password" />
+				<span class="input-alert"></span>
+				<div class="login-container-item login-button-container">
+					<input type="button" class="login-button" value="CONFIRM" />
+				</div>
+			</div>
+		</div>
+		<div id="wrapper">
+			<div id="banner">
+				<div id="logo-div" onclick='window.location.replace("index.html");'>
+					<div class="logo logo-back"></div>
+					<div class="logo logo-front"></div>
+				</div>
+				<div class="links">
+					<a href="addons.html" . class="link">ADDONS</a>
+					<a href="maps.html" class="link">MAPS</a>
+					<a href="faq.html" class="link">FAQ</a>
+					<a href="about.html" class="link">ABOUT</a>
+					<!--a href="request.html" class="link">REQUEST</a-->
+				</div>
+				<div id="user"><div class="user-icon"></div></div>
+				<div id="search" onclick='window.location.replace("search.html");'> SEARCH </div>
+			</div>
+			<div id="login-dropdown">
+				<div class="login-dropdown-item login">Login</div>
+				<div class="login-dropdown-item signup">Signup</div>
+			</div>
+			<div id="user-dropdown">
+				<div class="user-dropdown-container">
+					<div class="user-dropdown-item user-avatar icon"></div>
+					<div class="user-dropdown-item user-name"></div>
+					<div class="user-dropdown-item signout-button-container">
+						<input type="button" class="signout-button" value="Logout" />
+					</div>
+				</div>
+			</div>
+
+			<div id="about-container">
+				<div class="inside-about about-left">
+					<div class="about-logo about-logo-back"></div>
+					<div class="about-logo about-logo-front" onclick='window.location.replace("index.html");'></div>
+				</div>
+				<div class="inside-about about-right">
+					<div id="about"></div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="footer">
+			<p> This site contains All of my Addons/Maps for Minecraft Bedrock Edition. <br>You can download and use my creation but modifying it without my permission is strictly <a href="https://www.google.com/search?q=prohibited&oq=prohibited" style='color:white'><strong>PROHIBITED.</strong></a><br><br>@2021-2022 Mhafy1016<br>All rights reserved. <br>This site is not affiliated with Mojang Studios.</p>
+			<a href="https://web.facebook.com/profile.php?id=100088413580357"> &nbsp FACEBOOK &nbsp </a> ●
+			<a href="https://twitter.com/Mhafy1016"> &nbsp TWITTER &nbsp </a> ●
+			<a href="https://www.discord.com/users/1024788466791354448"> &nbsp DISCORD &nbsp </a> ●
+			<a href="about.html"> &nbsp ABOUT &nbsp </a> ●
+			<a href="https://paypal.me/Mhafy?country.x=PH&locale.x=en_US"> &nbsp DONATE &nbsp </a>
+			<!--a href="request.html"> &nbsp REQUEST</a-->
+		</footer>
+
+		<script src="scripts/script.js"></script>
+		<script src="scripts/captcha.js"></script>
+		<script src="scripts/about.js"></script>
+	</body>
+</html>

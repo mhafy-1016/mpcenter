@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>M-Uploader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preload" href="res/font/Mojang-Regular.ttf" as="font" crossOrigin="anonymous" />
+		<link rel="preload" href="res/font/Mojang-Bold.ttf" as="font" crossOrigin="anonymous" />
+		<link rel="icon" href="res/logo/logo.png">
+		<script type="module" src="scripts/module.js"></script>
+		
+		<link rel="stylesheet" href="stylesheets/style.css">
+		<link rel="stylesheet" href="stylesheets/item.css">
+		<link rel="stylesheet" href="stylesheets/preview.css">
+	</head>
+	
+	<body>
+		<!--div id="cover"></div-->
+		<div id="wrapper">
+			<div id="main-view">
+				<div id="card-box">
+				</div>
+				<div id="item-container" style="display: none;">
+					<div class="left">
+						<div id="item-header">
+							<div class="item-path header-item"></div>
+							<div class="item-bar"></div>
+							<div class="item-title header-item"></div>
+							<div class="item-tiny-detail header-item"></div>
+							<div class="item-tiny-detail header-item"></div>
+							<div class="item-status-bar header-item">
+								<div class="status-bar-item share-status"></div>
+								<div class="status-bar-item icon rating-status"></div>
+							</div>
+						</div>
+						<div id="item-body"></div>
+						<div id="item-footer"></div>
+					</div>
+					<div class="right">
+					</div>
+				</div>
+				<input type="button" id="left" value="◂" />
+				<input type="button" id="right" value="▸" />
+			</div>
+
+		</div>
+		<script src="scripts/script.js"></script>
+		<script src="scripts/card.js"></script>
+		<script type="module" src="scripts/preview.js"></script>
+	</body>
+</html>
