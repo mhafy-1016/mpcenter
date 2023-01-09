@@ -1,7 +1,7 @@
 import { db, getDocs, query, collection, 
 	doc, setDoc, addDoc, updateDoc, getDoc,
 	auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile, user
-} from '/scripts/module.js';
+} from '/module.js';
 
 (async _ => {
 	let path = new URL(window.location.href).pathname.replace(/\//g, '').split('.')[0];
