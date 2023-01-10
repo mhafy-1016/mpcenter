@@ -1,4 +1,4 @@
-import { db, doc, getDoc, updateDoc, setDoc, collection, getDocs, query, where } from '/scripts/module.js';
+import { db, doc, getDoc, updateDoc, setDoc, collection, getDocs, query, where } from '/mpcenter/scripts/module.js';
 // loading wabble
 for(let e of getElemList('loader')){
 	e.style.transform = 'scale(1, 0.95)';
