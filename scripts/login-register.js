@@ -50,7 +50,7 @@ password_field.valid = false;
 await onAuthStateChanged(auth, updateLoginState);
 
 async function updateLoginState(user){
-	user_icon.style.backgroundImage = 'url(/mpcenter/res/user.png)';
+	user_icon.style.backgroundImage = 'url(/res/user.png)';
 	user_icon.style.backgroundSize = '100% 100%';
 
 	if (document.getElementById('cover')) document.getElementById('cover').style.opacity = '0';
@@ -75,7 +75,7 @@ async function updateLoginState(user){
 		}
 		
 		if(user.displayName) {
-			getElemList('user-avatar')[0].style.background = 'url(/mpcenter/res/alpha/'+user.displayName.toLowerCase()[0]+'.png)';
+			getElemList('user-avatar')[0].style.background = 'url(/res/alpha/'+user.displayName.toLowerCase()[0]+'.png)';
 			getElemList('user-avatar')[0].style.backgroundSize = '100% 100%';
 			getElemList('user-avatar')[0].style.backgroundPosition = 'center center';
 			(_=>{
