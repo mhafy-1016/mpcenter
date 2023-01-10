@@ -62,7 +62,7 @@ function faqItem(f){
 	e.q.style.textAlign = 'left';
 	e.q.style.backgroundColor = 'black';
 	e.q.value = '▶  ' + f.q;
-	e.q.style.display = 'flex';
+	e.q.style['white-space'] = 'normal';
 	e.q.style.padding = '16px 16px 16px 32px';
 	e.appendChild(e.q);
 	
