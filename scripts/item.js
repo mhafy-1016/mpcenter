@@ -44,7 +44,7 @@ await onAuthStateChanged(auth, async u => {
 		combox.textarea.disabled = false;
 		combox.bottom.button.disabled = false;
 		
-		combox.bottom.avatar.style.background = `url(res/alpha/${user.displayName.toLowerCase()[0]}.png)`;
+		combox.bottom.avatar.style.background = `url(/mpcenter/res/alpha/${user.displayName.toLowerCase()[0]}.png)`;
 		combox.bottom.avatar.style.backgroundSize = '100% 100%';
 		combox.bottom.avatar.style.backgroundPosition = 'center center';
 		(_=>{
@@ -407,7 +407,7 @@ function update(item){
 
 function updateRating(r){
 	for (let j = 0; j < getElemList('rating-heart').length; j++){
-		getElemList('rating-heart')[j].style.background = (j < r) ? 'url(../res/heart-full.png' : 'url(../res/heart.png';
+		getElemList('rating-heart')[j].style.background = (j < r) ? 'url(/mpcenter/res/heart-full.png' : 'url(/mpcenter/res/heart.png';
 		getElemList('rating-heart')[j].style.backgroundSize = '100% 100%';
 	}
 }
@@ -478,7 +478,7 @@ function commenterBox(path, options={}){
 	let e = createElem('div', {class:'commenter'});
 	e.container = createElem('div', {class:'commenter-container'});
 	e.container.avatar = createElem('div', {class:'commenter-avatar icon'});
-	e.container.avatar.style.background = 'url(res/alpha/'+options.name.toLowerCase()[0]+'.png)';
+	e.container.avatar.style.background = 'url(/mpcenter/res/alpha/'+options.name.toLowerCase()[0]+'.png)';
 	e.container.avatar.style.backgroundSize = '100% 100%';
 	e.container.avatar.style.backgroundPosition = 'center center';
 	(_=>{
@@ -536,7 +536,7 @@ function commenterBox(path, options={}){
 				e.body.footer.button.value = 'Cancel';
 				e.replies_container.combox.style.display = 'block';
 				
-				e.replies_container.combox.bottom.avatar.style.background = 'url(res/alpha/'+user.displayName.toLowerCase()[0]+'.png)';
+				e.replies_container.combox.bottom.avatar.style.background = 'url(/mpcenter/res/alpha/'+user.displayName.toLowerCase()[0]+'.png)';
 				e.replies_container.combox.bottom.avatar.style.backgroundSize = '100% 100%';
 				e.replies_container.combox.bottom.avatar.style.backgroundPosition = 'center center';
 				(_=>{
