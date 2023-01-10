@@ -50,7 +50,7 @@ password_field.valid = false;
 await onAuthStateChanged(auth, updateLoginState);
 
 async function updateLoginState(user){
-	user_icon.style.backgroundImage = 'url(./res/user.png)';
+	user_icon.style.backgroundImage = 'url(res/user.png)';
 	user_icon.style.backgroundSize = '100% 100%';
 
 	if (document.getElementById('cover')) document.getElementById('cover').style.opacity = '0';
