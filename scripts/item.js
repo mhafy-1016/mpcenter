@@ -1,6 +1,6 @@
 import { db, doc, collection, getDocs, query, where, onSnapshot, setDoc, getDoc, updateDoc, addDoc, orderBy,
 	auth, onAuthStateChanged
-} from '/scripts/module.js';
+} from '/mpcenter/scripts/module.js';
 
 for(let e of getElemList('header-item')){
 	e.style.animation = `wabble 1s infinite ${Math.random()}s`;
