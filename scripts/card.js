@@ -3,7 +3,7 @@
 function Card(data={}, options={}){
 	options.scale = options.scale || 0.96;
 	options.index = options.index || 1;
-	if(options.click == undefined) options.click = function(){ window.location.replace('item.html?id='+data.id); };
+	if(options.click == undefined) options.click = function(){ window.location.replace('item?id='+data.id); };
 	let rated = data.rating.length;
 	let rating = 0;
 	for(let a of data.rating){
