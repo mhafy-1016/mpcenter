@@ -59,6 +59,10 @@ await onAuthStateChanged(auth, async u => {
 		combox.bottom.name.innerHTML = user.displayName;
 		scroll(combox.bottom.name, 16, 1);
 	} else {
+		updateRating(0);
+		getElemList('rate-status')[0].style.color = 'yellow';
+		getElemList('rate-status')[0].innerHTML = 'Please <span class="login-shorcut">Login</span> first';
+		
 		combox.textarea.placeholder = 'Login First';
 		combox.textarea.disabled = true;
 		combox.bottom.button.disabled = true;
