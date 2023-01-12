@@ -311,40 +311,46 @@ function update(item){
 		}, false);
 		
 		window.addEventListener('click', async(e) => {
-			if(e.target.classList.contains('item-tag')) window.sessionStorage[item.type+'_tags'] = e.target.innerHTML.toLowerCase(); 
-			else if (e.target.classList.contains('login-shorcut')) getElemList('login')[0].onclick();
+			if(user){
+				if(e.target.classList.contains('item-tag')) window.sessionStorage[item.type+'_tags'] = e.target.innerHTML.toLowerCase(); 
+				else if (e.target.classList.contains('login-shorcut')) getElemList('login')[0].onclick();
 
-			if(e.target.classList.contains('share-button')){
-				getElem('link-bg').style.display = 'block';
-				getElemList('link-area')[0].value = window.location.href + '';
-				getElemList('link-copy')[0].disabled = false;
-				getElemList('link-copy')[0].value = 'COPY';
-				getElem('link-board').style.animation = 'pop 0.5s forwards';
-			} else if (e.target.id == 'link-bg') getElem('link-bg').style.display = 'none';
+				if(e.target.classList.contains('share-button')){
+					getElem('link-bg').style.display = 'block';
+					getElemList('link-area')[0].value = window.location.href + '';
+					getElemList('link-copy')[0].disabled = false;
+					getElemList('link-copy')[0].value = 'COPY';
+					getElem('link-board').style.animation = 'pop 0.5s forwards';
+				} else if (e.target.id == 'link-bg') getElem('link-bg').style.display = 'none';
 
-			if (isMobile && !rated) {
-				let i = 0;
-				let inside = false;
-				for (let r of getElemList('rating-heart')) {
-					r.index = i++;
-					if (r.contains(e.target)) {
-						inside = true;
-						if (rate == r.index + 1) {
-							await setDoc(doc(collection(db, 'projects/' + item.id + '/ratings')), {
-								rater: user.uid,
-								rate: r.index + 1,
-								checked: false
-							});
-							rated = true;
-							getElemList('rate-status')[0].innerHTML = 'Thanks a lot!';
-						} else {
-							updateRating(r.index + 1);
-							getElemList('rate-status')[0].innerHTML = 'Click again';
-							rate = r.index + 1;
+				if (isMobile && !rated) {
+					let i = 0;
+					let inside = false;
+					for (let r of getElemList('rating-heart')) {
+						r.index = i++;
+						if (r.contains(e.target)) {
+							inside = true;
+							if (rate == r.index + 1) {
+								await setDoc(doc(collection(db, 'projects/' + item.id + '/ratings')), {
+									rater: user.uid,
+									rate: r.index + 1,
+									checked: false
+								});
+								rated = true;
+								getElemList('rate-status')[0].innerHTML = 'Thanks a lot!';
+							} else {
+								updateRating(r.index + 1);
+								getElemList('rate-status')[0].innerHTML = 'Click again';
+								rate = r.index + 1;
+							}
 						}
 					}
+					if (!inside) rate = -1;
 				}
-				if (!inside) rate = -1;
+			} else if(!user){
+				updateRating(0);
+				getElemList('rate-status')[0].style.color = 'yellow';
+				getElemList('rate-status')[0].innerHTML = 'Please <span class="login-shorcut">Login</span> first';
 			}
 		});
 		
