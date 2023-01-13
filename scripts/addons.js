@@ -149,7 +149,7 @@ window.onclick = (e) => {
 	rewriteLink();
 
 	for(let i=0; i<Math.min(totalDisplay, totalCards - totalDisplay * (page-1)); i++){
-		let e = new Card(items[i], { scale: 0.9, index: i });
+		let e = new Card(items[i], { scale: 0.9, index: i, doWave: true });
 		e.style.animation = 'pop 0.5s forwards';
 		e.style.animationDelay = (0.1 * i) + 's';
 		getElem('result').appendChild(e);
