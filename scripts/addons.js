@@ -178,8 +178,8 @@ window.onclick = (e) => {
 })();
 
 function updateLink(){
-	window.location.replace('addons.html?sort='+sort_value+'&type='+sort_type+'&page='+page);
+	window.location.replace('addons?sort='+sort_value+'&type='+sort_type+'&page='+page);
 }
 function rewriteLink(){
-	window.history.pushState('addon', 'Addons Page', 'addons.html?sort='+sort_value+'&type='+sort_type+'&page='+page);
+	window.history.pushState('addon', 'Addons Page', 'addons?sort='+sort_value+'&type='+sort_type+'&page='+page);
 }
