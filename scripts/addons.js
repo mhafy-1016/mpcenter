@@ -149,6 +149,11 @@ window.onclick = (e) => {
 	rewriteLink();
 
 	for(let i=0; i<Math.min(totalDisplay, totalCards - totalDisplay * (page-1)); i++){
+		items[i].rating = [];
+		let ratingCol = await getDocs(query(collection(db, `projects/${items[i].id}/ratings`)));
+		if(ratingCol && ratingCol.size > 0) {
+			ratingCol.forEach((doc) => { items[i].rating.push(doc.data()); });
+		}
 		let e = new Card(items[i], { scale: 0.9, index: i, doWave: true });
 		e.style.animation = 'pop 0.5s forwards';
 		e.style.animationDelay = (0.1 * i) + 's';
