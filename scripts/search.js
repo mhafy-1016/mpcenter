@@ -1,4 +1,4 @@
-import { db, doc, getDoc, updateDoc, setDoc, collection, getDocs, query, where } from '/scripts/module.js';
+import { db, doc, getDoc, updateDoc, setDoc, collection, getDocs, query, where } from '/mpcenter/scripts/module.js';
 
 let items = [];
 var url = new URL(window.location.href);
@@ -35,7 +35,7 @@ seach_bar.addEventListener('keyup', (e) => {
 
 function search_list(name){
 	search = name;
-	window.history.pushState('search', 'Search Page', 'search.html?search='+search+'&page='+page);
+	window.history.pushState('search', 'Search Page', 'search?search='+search+'&page='+page);
 	
 	if(!name || name === '') return;
 	let list = [];
@@ -89,5 +89,5 @@ function search_list(name){
 }
 
 function updateLink(){
-	window.location.replace('search.html?search='+search+'&page='+page);
+	window.location.replace('search?search='+search+'&page='+page);
 }
