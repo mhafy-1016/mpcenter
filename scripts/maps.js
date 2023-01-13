@@ -171,8 +171,8 @@ window.onclick = (e) => {
 
 function updateLink(){
 	window.sessionStorage.removeItem('map_tags');
-	window.location.replace('maps.html?sort='+sort_value+'&type='+sort_type+'&page='+page);
+	window.location.replace('maps?sort='+sort_value+'&type='+sort_type+'&page='+page);
 }
 function rewriteLink(){
-	window.history.pushState('map', 'Maps Page', 'maps.html?sort='+sort_value+'&type='+sort_type+'&page='+page);
+	window.history.pushState('map', 'Maps Page', 'maps?sort='+sort_value+'&type='+sort_type+'&page='+page);
 }
